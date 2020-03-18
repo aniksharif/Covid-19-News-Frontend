@@ -38,8 +38,8 @@ function CovidData(props) {
       onMouseEnter={() => handleMouseEnter()}
       onMouseLeave={() => handleMouseLeave()}
     >
-      <p className="h1 display-4">{props.children[0]}</p>
-      <p className="h1 font-weight-light">
+      <p className="h2 display-4">{props.children[0]}</p>
+      <p className="h2 font-weight-light">
         {numberWithCommas(props.children[1])}
       </p>
     </div>
