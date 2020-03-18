@@ -1,46 +1,49 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import CovidData from "./components/CovidData";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
-  const [countriesList, setCountriesList] = useState([]);
-  const [covidDatas, setCovidDatas] = useState([]);
+  const [datas, setDatas] = useState();
+  async function fetchAPI() {
+    const res = await fetch("https://covid19.mathdro.id/api");
+    const data = await res.json();
+    return await setDatas(data);
+  }
   useEffect(() => {
-    async function fetchAPI() {
-      const res = await fetch(
-        "https://pomber.github.io/covid19/timeseries.json"
-      );
-      const data = await res.json();
-      await setCountriesList(Object.keys(data));
-      await setCovidDatas(Object.values(data));
-    }
-
     fetchAPI();
   }, []);
+
+  function actualiser() {
+    setDatas("");
+    fetchAPI();
+  }
   return (
-    <div className="container-fluid">
-      <header className="my-3" style={{ textAlign: "center" }}>
-        <h1 className="display-4">
-          CoViD-19 <br />
-          Live Figures
-        </h1>
-      </header>
-      <main className="container-fluid">
-        <div className="card card-body">
-          <ul className="list-group card-title">
-            {countriesList.map(country => {
-              return (
-                <li
-                  className="list-group-item"
-                  onMouseEnter={() => console.log("entered")}
-                  onMouseLeave={() => console.log("left")}
-                >
-                  {country}
-                </li>
-              );
-            })}
-          </ul>
+    <div>
+      <Header />
+      <hr />
+      <main className="my-4 container-fluid">
+        <div className="p-3 row">
+          <CovidData>
+            Confirmed {datas ? datas.confirmed.value : "fetching..."}
+          </CovidData>
+          <CovidData>
+            Deaths {datas ? datas.deaths.value : "fetching..."}
+          </CovidData>
+          <CovidData>
+            Recovered {datas ? datas.recovered.value : "fetching..."}
+          </CovidData>
         </div>
+        <button
+          className="p-2 mt-4 btn btn-primary btn-sm"
+          onClick={() => actualiser()}
+        >
+          Actualiser
+          <i class="fa fa-refresh ml-2"></i>
+        </button>
       </main>
+      <Footer />
     </div>
   );
 }
