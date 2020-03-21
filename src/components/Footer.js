@@ -10,12 +10,14 @@ function Footer() {
           href="http://spb.org.bd/"
           style={{fontFamily:'serif'}}
         >
-           প্রচারে  <br /><br />  বাসদ <br /> <br /> সমাজতান্ত্রিক ছাত্র ফ্রন্ট <br /> <br /> বিজ্ঞান আন্দোলন মঞ্চ   
+            সহযোগিতায়  <br /><br />  বাসদ <br /> <br /> বিজ্ঞান আন্দোলন মঞ্চ   
         </a>
       </p>
       <p className="h6">
-        All informations are collected from 
-        <a href="https://www.worldometers.info/coronavirus/"> worldometers</a>
+        All statistics,informations are collected from 
+        <a href="https://www.worldometers.info/coronavirus/"> worldometers</a>,
+        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"> WHO </a>,
+        <a href="cdc.gov/coronavirus/2019-ncov/index.html"> CDC </a>
       </p>
     </footer>
     </>

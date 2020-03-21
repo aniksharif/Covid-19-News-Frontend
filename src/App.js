@@ -77,7 +77,10 @@ class App extends React.Component {
           <div id="info">
             <Info />
           </div>
-          <p className="h4">Global Statistics</p>
+          <br />
+          <br />
+          <br />
+          <p className="h2">Global Statistics</p>
           <div className="p-3 row" id="stat">
             <CovidData>
               Confirmed {this.state.datas ? this.state.datas.cases : "fetching..."}
@@ -97,7 +100,7 @@ class App extends React.Component {
             <i className="fa fa-refresh ml-2"></i>
           </button> */}
           <header className="p-3">
-            <p className="h4">Country Based Data</p>
+            <p className="h2">Country Based Statistics</p>
             <p className="my-1">Select a country from dropdown</p>
           </header>
           <Dropdown options={Array.from(options).sort()} onChange={(option) => this._onSelect(option)} value={this.state.selected} placeholder="Select a country" />
@@ -116,18 +119,21 @@ class App extends React.Component {
           </div>
           <div id="map">
             <header className="p-3">
-              <p className="h1">Covid-19 on Map</p>
+              <p className="h2">Covid-19 on Map</p>
               <p className="my-1">Deeper color means more severe!</p>
             </header>
             <GlobalMap />
             <p className="my-1">For more info visit : <a href="https://www.worldometers.info/coronavirus/">https://www.worldometers.info/coronavirus/</a></p>
           </div>
+          <br />
+          <br />
+          <br />
           <div id="contact">
           <header className="p-3">
-              <p className="h3">Contact</p>
+              <p className="h2">Contact</p>
              
             </header>
-          <img  src="coronassf2.png" />
+          <img style={{width:"90vw"}}  src="coronassf2.png" />
           </div>
         </main>
         <Footer id="footer" />
