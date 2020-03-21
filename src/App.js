@@ -66,6 +66,9 @@ class App extends React.Component {
               <li className="nav-item">
                 <a className="nav-link" href="#map">Map</a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contact">Contact</a>
+              </li>
 
             </ul>
           </div>
@@ -118,6 +121,13 @@ class App extends React.Component {
             </header>
             <GlobalMap />
             <p className="my-1">For more info visit : <a href="https://www.worldometers.info/coronavirus/">https://www.worldometers.info/coronavirus/</a></p>
+          </div>
+          <div id="contact">
+          <header className="p-3">
+              <p className="h3">Contact</p>
+             
+            </header>
+          <img  src="coronassf2.png" />
           </div>
         </main>
         <Footer id="footer" />
