@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: lato;
+}
+
+.marker.red path {
+    fill: #f05305;
+}
+
+.marker.yellow path {
+    fill: #F3B73E
+}
+
+.marker.green path {
+    fill: greenyellow
+}
+
+.popup-title {
+    color: red;
+    padding-bottom: 5px;
+    border-bottom: .25px solid lightgray;
+}
