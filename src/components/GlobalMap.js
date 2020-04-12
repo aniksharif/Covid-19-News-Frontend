@@ -38,9 +38,9 @@ const GlobalMap = () => {
       {...viewport}
       onViewportChange={setViewport}
       mapboxApiAccessToken={
-        "pk.eyJ1IjoiZXZhbmNvbGV3cmlnaHQiLCJhIjoiY2s3cjAwejVsMDBuZzNucHVhNXh5OG51ZyJ9.voezeofw0SxLbqn2r1z8QA"
+        ""
       }
-      mapStyle="mapbox://styles/thecjreynolds/ck117fnjy0ff61cnsclwimyay"
+      mapStyle=""
       style={{display:"inline-block"}}
     >
       
