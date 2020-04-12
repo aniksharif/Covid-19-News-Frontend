@@ -22,8 +22,8 @@ class App extends React.Component {
   }
 
   async fetchAPI() {
-    const res = await fetch("https://covid-19track.herokuapp.com/globalinfo");
-    const localres = await fetch("https://covid-19track.herokuapp.com/allinfo");
+    const res = await fetch(url);
+    const localres = await fetch(url);
     const data = await res.json();
     const localData = await localres.json();
     this.setState({ datas: data, countryData: localData })
